@@ -1,4 +1,4 @@
-package AM.Equipamiento;
+package AM.equipamiento;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -5,25 +5,24 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@GetMapping("/medico") 
-
+@RequestMapping("/api/medicos")
 public class MedicoController {
 
     @Autowired
     private MedicoService medicoservice;
 
     @PostMapping("")
-    public ResponseEntity<medico> addMedico (@RequestBody Medico medico){
-        Medico med = medicoService.saveOrUpdateMedico(medico);
-        return new ResponseEntiry<medico>(med, HttpStatus.CREATED);
+    public ResponseEntity<Medico> addMedico (@RequestBody Medico medico){
+        Medico med = medicoservice.saveOrUpdateMedico(medico);
+        return new ResponseEntity<Medico>(med, HttpStatus.CREATED);
     }
-
+ 
     @GetMapping("")
-    public Iterable<medico> getMedicos(){
-        return medicosService.listAll();
+    public Iterable<Medico> getMedicos(){
+        return medicoservice.listAll();
     }
 
 }

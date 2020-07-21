@@ -1,7 +1,7 @@
 package AM.Equipamiento;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repossitory;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MedicoRepository extends CrudRepository<Medico, Long> {

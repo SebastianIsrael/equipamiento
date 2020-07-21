@@ -12,7 +12,7 @@ public class MedicoService {
         return medicoRepository.save(medico);
     }
 
-    public Iterable<medico> listAll(){
+    public Iterable<Medico> listAll(){
         return medicoRepository.findAll();
     }
 }

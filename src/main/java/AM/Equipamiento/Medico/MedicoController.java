@@ -1,4 +1,4 @@
-package AM.Equipamiento;
+package AM.Equipamiento.Medico;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

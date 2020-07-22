@@ -1,4 +1,4 @@
-package AM.Equipamiento;
+package AM.Equipamiento.Medico;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +27,7 @@ public class Medico {
         return this.nombre;
     }
     public String getState(){
-        return this.estado;
+        return this.estado1;
     }
     public String getCharge(){
         return this.cargo;

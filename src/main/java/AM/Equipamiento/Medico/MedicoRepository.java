@@ -1,4 +1,4 @@
-package AM.Equipamiento;
+package AM.Equipamiento.Medico;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

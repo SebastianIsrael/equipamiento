@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/medicos")
-public class MedicoController {
 
+public class MedicoController {
     @Autowired
     private MedicoService medicoservice;
 

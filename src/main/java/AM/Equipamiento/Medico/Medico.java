@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @Entity
@@ -15,7 +14,7 @@ public class Medico {
     private Long id;
     private String nombre;
     private String cargo;
-    private String estado;
+    private String estado1;
 
     public void setId(Long id){
         this.id = id;

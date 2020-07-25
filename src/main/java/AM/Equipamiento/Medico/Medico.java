@@ -14,7 +14,7 @@ public class Medico {
     private Long id;
     private String nombre;
     private String cargo;
-    private String estado1;
+    private String estado;
 
     public void setId(Long id){
         this.id = id;
@@ -27,7 +27,7 @@ public class Medico {
         return this.nombre;
     }
     public String getState(){
-        return this.estado1;
+        return this.estado;
     }
     public String getCharge(){
         return this.cargo;

@@ -14,14 +14,16 @@ public class EquipamientoController {
     @Autowired
     private EquipamientoService equipamientoservice;
 
-    @PostMapping("")
+    @PostMapping("/elrutapost")
     public ResponseEntity<Equipamiento> addEquipamiento (@RequestBody Equipamiento equipamiento){
         Equipamiento equip = equipamientoservice.saveOrUpdateEquipamiento(equipamiento);
         return new ResponseEntity<Equipamiento>(equip, HttpStatus.CREATED);
     }
+
  
     @GetMapping("")
     public Iterable<Equipamiento> getEquipamientos(){
-        return equipamientoservice.listAll();
+        return equipamientoservice.listAll(); 
+        
     }
 }

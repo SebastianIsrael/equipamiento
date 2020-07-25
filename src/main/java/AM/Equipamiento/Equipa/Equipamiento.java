@@ -16,18 +16,21 @@ public class Equipamiento {
     public void setId(Long id){
         this.id = id;
     }
-    public void setName(String n){
+    public void setNombre(String n){
         this.nombre =  n;
     }
     public void setDescription(String d){
         this.descripcion =  d;
     }
+    
     public String getName(){
         return this.nombre;
     }
-
     public String getDescription(){
         return this.descripcion;
+    }
+    public Long getId(){
+        return this.id;
     }
 
 }

@@ -23,13 +23,13 @@ public class Medico {
     public Long getId(){
         return this.id;
     }
-    public String getName(){
+    public String getNombre(){
         return this.nombre;
     }
-    public String getState(){
+    public String getEstado(){
         return this.estado;
     }
-    public String getCharge(){
+    public String getCargo(){
         return this.cargo;
     }
 

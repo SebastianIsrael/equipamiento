@@ -27,6 +27,7 @@ public class EquipamientoService {
             return true;
         }
         catch (Exception e){
+            System.out.print(e);
             return false;
         }
     }
@@ -50,8 +51,6 @@ public class EquipamientoService {
     }
 
 
-
-
     /*
     public Equipamiento saveOrUpdateEquipamiento(Equipamiento equipamiento){
         return equipamietoRepository.save(equipamiento);
@@ -62,4 +61,5 @@ public class EquipamientoService {
     }
 
     */
+    
 }

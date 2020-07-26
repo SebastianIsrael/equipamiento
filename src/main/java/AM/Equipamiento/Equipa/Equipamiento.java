@@ -3,6 +3,7 @@ package AM.Equipamiento.Equipa;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 //import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -15,8 +16,10 @@ public class Equipamiento {
     @Id
     @GenericGenerator(name="incrementequipamiento", strategy="increment")
     @GeneratedValue(generator="incrementequipamiento")
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+
     
-    @Column(name="id_equipamiento")
+    @Column(name="id")
     Long id;
 
     @Column(name="nombre")
@@ -46,20 +49,18 @@ public class Equipamiento {
         this.id = id;
     }
 
-    public String getName(){
+    public String getNombre(){
         return this.nombre;
     }
     public void setNombre(String n){
         this.nombre =  n;
     }
 
-    public String getDescription(){
+    public String getDescripcion(){
         return this.descripcion;
     }
-    public void setDescription(String d){
+    public void setDescripcion(String d){
         this.descripcion =  d;
     }
    
-
-
 }

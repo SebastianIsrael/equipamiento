@@ -41,8 +41,8 @@ public class EquipamientoController {
         return equipamientoservice.obtenerporId(id);
     }
 
-    @PostMapping("/")
-    public boolean agregarEquipamiento(@RequestBody @Valid Equipamiento equipamiento){
+    @PostMapping("/elpost")
+    public boolean agregarEquipamiento(@RequestParam(name = "id", required = false) Equipamiento equipamiento){
         return equipamientoservice.crear(equipamiento);
     }
 
@@ -55,23 +55,23 @@ public class EquipamientoController {
     public boolean borrarEquipamiento(@PathVariable("id") long id){
         return equipamientoservice.borrar(id);
     }
-    @GetMapping("/equipos")
+    @GetMapping("/equipamiento")
     public List<Equipamiento> getAllEquipamiento(){
         return equipamientoservice.obtenerAll();
     }
 
 /*
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<Equipamiento> addEquipamiento (@RequestBody Equipamiento equipamiento){
         Equipamiento equip = equipamientoservice.saveOrUpdateEquipamiento(equipamiento);
         return new ResponseEntity<Equipamiento>(equip, HttpStatus.CREATED);
     }
 
- 
-    @GetMapping("/")
+ */
+    @GetMapping("")
     public Iterable<Equipamiento> getEquipamientos(){
-        return equipamientoservice.listAll(); 
+        return equipamientoservice.obtenerAll(); 
         
     }
-*/
+
 }

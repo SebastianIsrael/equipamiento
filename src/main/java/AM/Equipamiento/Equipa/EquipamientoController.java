@@ -1,6 +1,7 @@
 package AM.Equipamiento.Equipa;
 
-
+import AM.Equipamiento.Equipa.Equipamiento;
+import AM.Equipamiento.Equipa.EquipamientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/equipamientos")
-
 public class EquipamientoController {
     @Autowired
     private EquipamientoService equipamientoservice;
@@ -21,7 +20,7 @@ public class EquipamientoController {
     }
 
  
-    @GetMapping("")
+    @GetMapping("/")
     public Iterable<Equipamiento> getEquipamientos(){
         return equipamientoservice.listAll(); 
         

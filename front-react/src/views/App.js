@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
-import Equipamiento from './Equipamientotest'
+import Equipamiento from './equipamiento'
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Equipamiento/>
+        
       </header>
+      <body>
+        <Equipamiento></Equipamiento>
+      </body>
     </div>
   );
 }
-
-
-
 
 export default App;

@@ -19,11 +19,9 @@ class Tabla extends Component{
                 this.setState({equipment})
         });
     }
-
-
     render(){
         return(
-            <div className="panel panel-default p50 uth-panel">
+            <div className="container">
                 <table className="table table-hover">
                     <thead>
                         <tr>
@@ -48,26 +46,3 @@ class Tabla extends Component{
     }
 }
 export default Tabla;
-/*
-
-<div className="panel panel-default p50 uth-panel">
-    <table className="table table-hover">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Categoría</th>
-            </tr>
-        </thead>
-        <tbody>
-            {this.state.items.map(items =>
-                <tr key={items.item_id}>
-                    <td>{items.name}</td>
-                    <td>{items.category} </td>
-                </tr>
-            )}
-        </tbody>
-    </table>
-</div>
-
-
-*/

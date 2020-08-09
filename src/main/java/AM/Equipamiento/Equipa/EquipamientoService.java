@@ -49,17 +49,4 @@ public class EquipamientoService {
     public List<Equipamiento> obtenerAll(){
         return equipamietoRepository.findAll();
     }
-
-
-    /*
-    public Equipamiento saveOrUpdateEquipamiento(Equipamiento equipamiento){
-        return equipamietoRepository.save(equipamiento);
-    }
-
-    public Iterable<Equipamiento> listAll(){
-        return equipamietoRepository.findAll();
-    }
-
-    */
-    
 }

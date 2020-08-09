@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import equipamientosService from '../services/equipamientos.service';
 
 
-class Tabla extends Component{
+class Add_equipment extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -21,8 +21,11 @@ class Tabla extends Component{
     }
     render(){
         return(
-            <div className="container">
-                <table className="table table-hover">
+            <div>
+                <h1>
+                    All Equipments. 
+                </h1>
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -45,4 +48,4 @@ class Tabla extends Component{
         );
     }
 }
-export default Tabla;
+export default Add_equipment;

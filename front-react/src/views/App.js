@@ -11,8 +11,10 @@ function App() {
       <header className="App-header">
         
       </header>
-      <body>
+
+      <body className="App-body">
         <Equipamiento></Equipamiento>
+
       </body>
     </div>
   );

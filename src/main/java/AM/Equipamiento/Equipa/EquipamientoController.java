@@ -4,15 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-//import AM.Equipamiento.Equipa.Equipamiento;
-//import AM.Equipamiento.Equipa.EquipamientoService;
-
-/*
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
-*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -36,12 +27,12 @@ public class EquipamientoController {
     @Qualifier("servicioequipamiento")
     EquipamientoService equipamientoservice;
 
-    @GetMapping("/")
+    @GetMapping("/equipid/{id}")
     public Equipamiento obtenetEquipamiento(@RequestParam(name = "id", required = true) long id) {
         return equipamientoservice.obtenerporId(id);
     }
 
-    @PostMapping("/elpost")
+    @PostMapping("/addequipment")
     public boolean agregarEquipamiento(@RequestParam(name = "id", required = false) Equipamiento equipamiento){
         return equipamientoservice.crear(equipamiento);
     }
@@ -60,14 +51,6 @@ public class EquipamientoController {
         return equipamientoservice.obtenerAll();
     }
 
-/*
-    @PostMapping("")
-    public ResponseEntity<Equipamiento> addEquipamiento (@RequestBody Equipamiento equipamiento){
-        Equipamiento equip = equipamientoservice.saveOrUpdateEquipamiento(equipamiento);
-        return new ResponseEntity<Equipamiento>(equip, HttpStatus.CREATED);
-    }
-
- */
     @GetMapping("")
     public Iterable<Equipamiento> getEquipamientos(){
         return equipamientoservice.obtenerAll(); 

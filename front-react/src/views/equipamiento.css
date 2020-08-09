@@ -2,17 +2,15 @@
     text-align: center;
   }
   
-  
-.equip-body {
-    background-color: #2652a8;
-    min-height: 10vh;
+.equipamiento-body {
     display: flex;
-    flex-direction: column;
+    height: 89vh;
+    /*flex-direction: column; /*alineación vertical para los contenedores*/
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    text-align: center;
   }
-
-
-  

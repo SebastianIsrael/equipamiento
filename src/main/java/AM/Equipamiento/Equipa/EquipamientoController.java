@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/equipamiento")
+@RequestMapping("/apiEquipamiento")
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 
 public class EquipamientoController {
@@ -27,34 +27,29 @@ public class EquipamientoController {
     @Qualifier("servicioequipamiento")
     EquipamientoService equipamientoservice;
 
-    @GetMapping("/equipid/{id}")
-    public Equipamiento obtenetEquipamiento(@RequestParam(name = "id", required = true) long id) {
+    @GetMapping("/equipment/{id}")
+    public Equipamiento obtenerEquipamiento(@PathVariable("id") long id) {
         return equipamientoservice.obtenerporId(id);
     }
-
-    @PostMapping("/addequipment")
-    public boolean agregarEquipamiento(@RequestParam(name = "id", required = false) Equipamiento equipamiento){
-        return equipamientoservice.crear(equipamiento);
-    }
-
-    @PutMapping("/")
-    public boolean actualizarEquipamiento(@RequestBody @Valid Equipamiento equipamiento){
-        return equipamientoservice.actualizar(equipamiento);
-    }
-
-    @DeleteMapping("/{id}")
-    public boolean borrarEquipamiento(@PathVariable("id") long id){
-        return equipamientoservice.borrar(id);
-    }
-    @GetMapping("/equipamiento")
+    @GetMapping("/equipment")
     public List<Equipamiento> getAllEquipamiento(){
         return equipamientoservice.obtenerAll();
     }
 
-    @GetMapping("")
-    public Iterable<Equipamiento> getEquipamientos(){
-        return equipamientoservice.obtenerAll(); 
-        
+    @PostMapping("/equipment")
+    public boolean agregarEquipamiento(@RequestParam(name = "id", required = false) Equipamiento equipamiento){
+        return equipamientoservice.crear(equipamiento);
     }
+
+    @PutMapping("/equipment/{id}")
+    public boolean actualizarEquipamiento(@RequestBody @Valid Equipamiento equipamiento){
+        return equipamientoservice.actualizar(equipamiento);
+    }
+
+    @DeleteMapping("/equipment/{id}")
+    public boolean borrarEquipamiento(@PathVariable("id") long id){
+        return equipamientoservice.borrar(id);
+    }
+
 
 }

@@ -1,6 +1,6 @@
 HELP.md
 target/
-front-react/node_modules
+front-react/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

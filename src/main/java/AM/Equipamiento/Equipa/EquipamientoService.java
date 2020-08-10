@@ -25,11 +25,10 @@ public class EquipamientoService {
         try{
             equipamietoRepository.save(equipamiento);
             return true;
-        }
-        catch (Exception e){
-            System.out.print(e);
+        }catch(Exception e){
             return false;
         }
+        
     }
 
     public boolean borrar(long id){

@@ -27,8 +27,8 @@ public class EquipamientoController {
     @Qualifier("servicioequipamiento")
     EquipamientoService equipamientoservice;
 
-    @GetMapping("/equipment/{id}")
-    public Equipamiento obtenerEquipamiento(@PathVariable("id") long id) {
+    @GetMapping("/")
+    public Equipamiento obtenerEquipamiento(@RequestParam(name="id", required=true) long id) {
         return equipamientoservice.obtenerporId(id);
     }
     @GetMapping("/equipment")
@@ -36,20 +36,27 @@ public class EquipamientoController {
         return equipamientoservice.obtenerAll();
     }
 
+/*
     @PostMapping("/equipment")
-    public boolean agregarEquipamiento(@RequestParam(name = "id", required = false) Equipamiento equipamiento){
-        return equipamientoservice.crear(equipamiento);
+    public ResponseEntity<Equipamiento> addEquipamiento(@RequestBody Equipamiento equipment){
+        Equipamiento equip = equipamientoservice.crear(equipment);
+        return new ResponseEntity<Equipamiento>(equip, HttpStatus.CREATED);
+    }*/
+
+    @PostMapping("/equipment")
+    public boolean agregarEquipamiento(@RequestBody @Valid Equipamiento equipo){
+        return equipamientoservice.crear(equipo);
     }
 
-    @PutMapping("/equipment/{id}")
+
+    @PutMapping("/")
     public boolean actualizarEquipamiento(@RequestBody @Valid Equipamiento equipamiento){
         return equipamientoservice.actualizar(equipamiento);
     }
 
-    @DeleteMapping("/equipment/{id}")
+    @DeleteMapping("/{id}")
     public boolean borrarEquipamiento(@PathVariable("id") long id){
         return equipamientoservice.borrar(id);
     }
-
 
 }
